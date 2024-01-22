@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Style css output -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d531d373d2.js" crossorigin="anonymous"></script>
+
+    <title>Login Form</title>
+</head>
+
+<body class="font-poppins text-headline">
+    <section class="h-screen bg-primary relative bg-no-repeat bg-cover flex justify-center items-center"
+        style="background-image: url(../public/img/Background.webp)">
+        <img class="max-w-xs absolute top-10" src="../public/img/Logo.png" alt="logo">
+        <div class="flex w-full justify-center h-fit">
+            <img src="../public/img/Cooking-logo.png" alt="Cooking Logo" class="mr-[20px] w-[186px] h-[203px]">
+            <span class="flex flex-col font-bold text-8xl uppercase relative gap-5 w-max justify-end">
+                <p>Masak Yang</p>
+                <p class="text-tertiary">kamu mau</p>
+            </span>
+        </div>
+        <div class="flex justify-center flex-col items-center bottom-5 absolute">
+            <p class="text-[36px] font-semibold">Mulai Sekarang</p>
+            <a href="#loginForm"
+                class="rounded-full flex justify-center items-center w-[63px] h-[63px] bg-[#000000] animate-bouncing mt-3">
+                <i class="fa-solid fa-arrow-down text-primary text-[40px]"></i>
+            </a>
+        </div>
+    </section>
+
+    <main class="w-screen h-screen flex justify-center items-center">
+        <section id="loginForm"
+            class="relative h-[90%] w-[80%] border-primary border-2 overflow-x-hidden rounded-xl flex">
+            <section class="relative w-full flex h-full">
+                <!-- LOGIN -->
+                <section class="w-6/12 items-start justify-start flex flex-col p-16">
+                    <form action="submit" class="w-full">
+                        <p class="text-3xl mb-5 font-bold">Email</p>
+                        <input type="email" name="email" placeholder="Masukan Email"
+                            class="border border-primary rounded-md w-full h-14 p-2 font-light outline-none">
+                        <p class="text-3xl mb-5 mt-12 font-bold">Password</p>
+                        <input type="password" name="password" placeholder="Masukan Password"
+                            class="border border-primary font-light rounded-md p-2 w-full h-14 outline-none">
+                        <div class="mt-5 mb-20 flex items-center gap-5">
+                            <input type="checkbox" id="remember" class="accent-primary w-5 h-5">
+                            <label for="remember" class="font-light text-[20px]">Ingat Saya</label>
+                        </div>
+                        <button class="bg-primary w-full py-2 font-bold text-2xl rounded-md">LOGIN</button>
+                    </form>
+                    <div class="flex mt-11 w-full justify-center gap-1 font-poppins">
+                        <p class="font-sans font-light">Lupa Password?</p>
+                        <a href="#" class="text-tertiary font-light underline-offset-2 underline">klik di sini</a>
+                    </div>
+                </section>
+                <!-- BACKGROUND -->
+                <section
+                    class="bg-primary relative w-6/12 h-full bg-no-repeat bg-cover flex justify-center items-center"
+                    style="background-image: url(../public/img/Background.webp);">
+                    <div class="flex flex-col h-full w-full justify-center gap-y-48 items-center">
+                        <img src="./img/Logo.png" alt="logo" class="h-[78px] opacity-100 w-[278px]">
+                        <span class="flex items-center flex-col">
+                            <p>Belum punya akun?</p>
+                            <a href="#" class="text-tertiary underline underlin-offset-1">Daftar Di Sini</a>
+                        </span>
+                    </div>
+                </section>
+                <!-- REGISTER -->
+                <section class="left-full w-6/12 absolute h-[100%] items-start justify-start flex flex-col p-16 ">
+                    <form action="submit" class="w-full grid gap-7 ">
+                        <div>
+                            <p class="text-3xl mb-3 font-bold">Email</p>
+                            <input type="email" name="email" placeholder="Masukan Email"
+                                class="border border-primary rounded-md w-full h-14 p-2 font-light outline-none">
+                        </div>
+                        <div>
+                            <p class="text-3xl mb-3 font-bold">Password</p>
+                            <input type="password" name="password" placeholder="Masukan Password"
+                                class="border border-primary font-light rounded-md p-2 w-full h-14 outline-none">
+                        </div>
+                        <div>
+                            <p class="text-3xl mb-3 font-bold">Confirm Password</p>
+                            <input type="password" name="password" placeholder="Masukan Password"
+                                class="border border-primary font-light rounded-md p-2 w-full h-14 outline-none">
+                        </div>
+                        <button
+                            class="bg-primary w-full py-2 mt-8 font-bold text-2xl rounded-md uppercase">signup</button>
+                    </form>
+                </section>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>
