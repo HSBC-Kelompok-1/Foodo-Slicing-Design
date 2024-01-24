@@ -3,6 +3,9 @@ module.exports = {
   content: ["./public/**/*.{html,js}"],
   theme: {
     extend: {
+      animation: {
+        'bouncing': 'bounce 2s ease-in infinite',
+     },
       fontFamily: {
         poppins: ["Poppins", "system-ui"],
       },
