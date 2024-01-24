@@ -18,22 +18,22 @@
     <title>Login Form</title>
 </head>
 
-<body class="font-poppins text-headline">
+<body class="font-poppins text-headline overflow-x-hidden">
     <section class="h-screen bg-primary relative bg-no-repeat bg-cover flex justify-center items-center"
         style="background-image: url(../public/img/Background.webp)">
-        <img class="max-w-xs absolute top-10" src="../public/img/Logo.png" alt="logo">
-        <div class="flex w-full justify-center h-fit">
-            <img src="../public/img/Cooking-logo.png" alt="Cooking Logo" class="mr-[20px] w-[186px] h-[203px]">
-            <span class="flex flex-col font-bold text-8xl uppercase relative gap-5 w-max justify-end">
+        <img class="max-w-[144px] absolute top-12" src="../public/img/Logo.png" alt="logo">
+        <div class="flex w-full justify-center items-end h-fit">
+            <img src="../public/img/Cooking-logo.png" alt="Cooking Logo" class="mr-[20px] mb-2 w-[110px]">
+            <span class="flex flex-col font-bold text-6xl h-full uppercase w-max">
                 <p>Masak Yang</p>
                 <p class="text-tertiary">kamu mau</p>
             </span>
         </div>
-        <div class="flex justify-center flex-col items-center bottom-5 absolute">
+        <div class="flex justify-center flex-col items-center bottom-9 absolute">
             <p class="text-[36px] font-semibold">Mulai Sekarang</p>
             <a href="#loginForm"
-                class="rounded-full flex justify-center items-center w-[63px] h-[63px] bg-[#000000] animate-bouncing mt-3">
-                <i class="fa-solid fa-arrow-down text-primary text-[40px]"></i>
+                class="rounded-full flex justify-center items-center w-[50px] h-[50px] bg-[#000000] animate-bouncing mt-3 p-2">
+                <i class="fa-solid fa-arrow-down text-primary text-[30px]"></i>
             </a>
         </div>
     </section>
@@ -41,16 +41,16 @@
     <main class="w-screen h-screen flex justify-center items-center">
         <section id="loginForm"
             class="relative h-[90%] w-[80%] border-primary border-2 overflow-x-hidden rounded-xl flex">
-            <section class="relative w-full flex h-full">
+            <section class="relative w-full flex translate-x-[-50%] h-full">
                 <!-- LOGIN -->
                 <section class="w-6/12 items-start justify-start flex flex-col p-16">
                     <form action="submit" class="w-full">
                         <p class="text-3xl mb-5 font-bold">Email</p>
                         <input type="email" name="email" placeholder="Masukan Email"
-                            class="border border-primary rounded-md w-full h-14 p-2 font-light outline-none">
+                            class="border border-primary rounded-md w-full h-14 p-4 font-light outline-none">
                         <p class="text-3xl mb-5 mt-12 font-bold">Password</p>
                         <input type="password" name="password" placeholder="Masukan Password"
-                            class="border border-primary font-light rounded-md p-2 w-full h-14 outline-none">
+                            class="border border-primary font-light rounded-md p-4 w-full h-14 outline-none">
                         <div class="mt-5 mb-20 flex items-center gap-5">
                             <input type="checkbox" id="remember" class="accent-primary w-5 h-5">
                             <label for="remember" class="font-light text-[20px]">Ingat Saya</label>
@@ -80,17 +80,17 @@
                         <div>
                             <p class="text-3xl mb-3 font-bold">Email</p>
                             <input type="email" name="email" placeholder="Masukan Email"
-                                class="border border-primary rounded-md w-full h-14 p-2 font-light outline-none">
+                                class="border border-primary rounded-md w-full h-14 p-4 font-light outline-none">
                         </div>
                         <div>
                             <p class="text-3xl mb-3 font-bold">Password</p>
                             <input type="password" name="password" placeholder="Masukan Password"
-                                class="border border-primary font-light rounded-md p-2 w-full h-14 outline-none">
+                                class="border border-primary font-light rounded-md p-4 w-full h-14 outline-none">
                         </div>
                         <div>
                             <p class="text-3xl mb-3 font-bold">Confirm Password</p>
                             <input type="password" name="password" placeholder="Masukan Password"
-                                class="border border-primary font-light rounded-md p-2 w-full h-14 outline-none">
+                                class="border border-primary font-light rounded-md p-4 w-full h-14 outline-none">
                         </div>
                         <button
                             class="bg-primary w-full py-2 mt-8 font-bold text-2xl rounded-md uppercase">signup</button>
