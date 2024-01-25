@@ -3,39 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
-</head>
-<body>
+    
+    <!-- Style css output -->
+    <link rel="stylesheet" href="./css/styles.css">
 
-</body>
-    <footer class="flex space-x-20 bg-yellow-400">
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Footer</title>
+</head>
+
+<body>
+    <footer class="flex space-x-20 bg-yellow-400 bg-no-repeat bg-cover" style="background-image: url(../public/img/Background.webp)"">
+        <!-- Kontainer kiri -->
         <div class="ml-40 my-5 space-y-1">
             <h1 class="text-xl font-bold">Perusahaan</h1>
-            <p class="font-poppins text-slate-500 " align="justify">
+            <p class="font-poppins text-slate-700 " align="justify">
                 Jl. Gatot Subroto No.Kav.88, RT.1/RW.9, Kuningan Bar., Kec. Mampang Prpt., Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 12899
             </p>
             <h1 class="text-xl font-bold pt-6">Ikuti Kami</h1>
-            <div class="flex size-1/4 items-center space-x-2">
+            <div class="flex size-1/4 top-3 items-center space-x-2">
                 <a href=""><img src="../public/img/facebook.png" alt=""></a>
                 <a href=""><img src="../public/img/instagram.png" alt=""></a>
                 <a href=""><img src="../public/img/twitter.png" alt=""></a>
             </div>
         </div>
             
-        <div class="my-5 space-y-3">
+        <!-- kontainer kanan -->
+        <div class="my-5 space-y-1">
             <h1 class="text-xl font-bold">Tentang Foodo</h1>
-            <p class="font-poppins text-slate-500" align="justify">
+            <p class="font-poppins text-slate-700" align="justify">
                 Foodo adalah sebuah aplikasi resep makanan dengan fitur pesan bahan yang akan di antarkan ke alamat anda
             </p>
             <h1 class="text-xl font-bold">Customer Service</h1>
             <div class="space-y-2">
-                <a class="flex font-poppins text-slate-500" href=""><img class="size-7 mr-5" src="../public/img/mail.png" alt="">costumerservice@foodo.com</a>
-                <a class="flex font-poppins text-slate-500" href=""><img class="size-7 mr-5" src="../public/img/phone.png" alt="">(021) 12098734</a>
+                <a class="flex font-poppins text-slate-700" href=""><img class="w-1/12 mr-5" src="../public/img/mail.png" alt="">costumerservice@foodo.com</a>
+                <a class="flex font-poppins text-slate-700" href=""><img class="w-1/12 mr-5" src="../public/img/phone.png" alt="">(021) 12098734</a>
             </div>
         </div>
 
-        <div class="space-y-5 mt-16">
+        <!-- kontainer kanan -->
+        <div class="space-y-5 mt-14">
             <img class="w-1/2 ml-14" src="../public/img/Logo.png" alt="">
             <div class="flex items-center space-x-2">
                 <a href="#" class="rounded-xl ml-9">
@@ -45,7 +55,9 @@
                     <img class="w-28 h-9" src="../public/img/apple.JPG" alt="">
                 </a>
             </div>
-            <p class="ml-16 font-poppins text-slate-500">© 2022 - 2024, PT. Foodo</p>
+            <p class="ml-16 font-poppins text-slate-700">© 2022 - 2024, PT. Foodo</p>
         </div>
     </footer>
+</body>
+    
 </html>
