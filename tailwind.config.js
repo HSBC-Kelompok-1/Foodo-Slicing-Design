@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        'bouncing': 'bounce 2s ease-in infinite',
-     },
+        bouncing: "bounce 2s ease-in infinite",
+      },
       fontFamily: {
         poppins: ["Poppins", "system-ui"],
       },
