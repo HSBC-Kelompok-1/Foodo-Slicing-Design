@@ -15,15 +15,226 @@
       rel="stylesheet"
     />
 
-    <title>Setup</title>
+    <!-- Fontawesome Link for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+
+    <title>Categorypage Foodo</title>
   </head>
 
   <body>
-    <div class="mr-[160px] ml-[160px] bg-white">
-      <div class="mt-[96px] relative">
-        <img class="w-full h-[280px]" src="./img/masakan-nusantara-2.png" />
+    <!--------------------------------------- Navbar ---------------------------------------------->
+    <nav
+      class="bg-primary flex justify-between items-center px-4 py-4 sm:px-8 md:px-12 xl:px-40 xl:py-4"
+    >
+      <div class="flex items-center gap-10">
+        <img class="w-24 h-7 hidden lg:block" src="./img/Logo.png" alt="Logo" />
+        <form class="relative" action="">
+          <input
+            class="block py-1 pl-14 w-64 rounded-2xl text-grayText text-sm font-light sm:w-96 xl:w-[30rem]"
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Cari Resep"
+          />
+          <div class="absolute top-0 left-0 my-1 ml-2">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 23 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.5985 19.3536C15.4338 19.3536 19.3536 15.4338 19.3536 10.5985C19.3536 5.76309 15.4338 1.84326 10.5985 1.84326C5.76309 1.84326 1.84326 5.76309 1.84326 10.5985C1.84326 15.4338 5.76309 19.3536 10.5985 19.3536Z"
+                stroke="#27231F"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M20.2751 20.2751L18.4319 18.4319"
+                stroke="#27231F"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </form>
+      </div>
+      <div
+        id="hamburger"
+        class="w-10 h-fit flex flex-col gap-2 p-1 items-end z-20 rounded-sm cursor-pointer sm:hidden"
+      >
+        <div class="bg-black w-full h-[4px] rounded-full"></div>
+        <div class="bg-black w-full h-[4px] rounded-full"></div>
+        <div class="bg-black w-full h-[4px] rounded-full"></div>
+      </div>
+
+      <div class="items-center gap-8 hidden sm:flex">
+        <div class="flex items-center gap-2">
+          <!-- Bookmark -->
+          <a href="#">
+            <svg
+              fill="#6f6f6f"
+              width="30"
+              height="30"
+              viewBox="0 0 32 32"
+              style="
+                fill-rule: evenodd;
+                clip-rule: evenodd;
+                stroke-linejoin: round;
+                stroke-miterlimit: 2;
+              "
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#6f6f6f"
+            >
+              <path
+                d="M16.004 6.576c-2.941-2.289-7.202-2.083-9.905.619a7.504 7.504 0 0 0 0 10.607l9.192 9.192a1 1 0 0 0 1.415 0l9.192-9.192a7.504 7.504 0 0 0 0-10.607c-2.69-2.69-6.951-2.88-9.894-.619zM16 8.904c.438-.008.667-.258.703-.289 2.355-2.05 5.641-2.145 7.781-.005a5.503 5.503 0 0 1 0 7.778l-8.486 8.485-8.485-8.485a5.503 5.503 0 0 1 0-7.778 5.504 5.504 0 0 1 7.78.001c.187.187.442.293.707.293z"
+              />
+            </svg>
+          </a>
+          <!-- History -->
+          <a href="#">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 35 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.8751 19.6987H11.6667C11.0688 19.6987 10.573 19.2029 10.573 18.605C10.573 18.0071 11.0688 17.5112 11.6667 17.5112H21.8751C22.473 17.5112 22.9688 18.0071 22.9688 18.605C22.9688 19.2029 22.473 19.6987 21.8751 19.6987Z"
+                fill="#6F6F6F"
+              />
+              <path
+                d="M18.0542 25.532H11.6667C11.0688 25.532 10.573 25.0362 10.573 24.4382C10.573 23.8403 11.0688 23.3445 11.6667 23.3445H18.0542C18.6522 23.3445 19.148 23.8403 19.148 24.4382C19.148 25.0362 18.6522 25.532 18.0542 25.532Z"
+                fill="#6F6F6F"
+              />
+              <path
+                d="M20.4167 10.6571H14.5834C13.1834 10.6571 10.573 10.6571 10.573 6.64665C10.573 2.63623 13.1834 2.63623 14.5834 2.63623H20.4167C21.8167 2.63623 24.4272 2.63623 24.4272 6.64665C24.4272 8.04665 24.4272 10.6571 20.4167 10.6571ZM14.5834 4.82373C13.1397 4.82373 12.7605 4.82373 12.7605 6.64665C12.7605 8.46956 13.1397 8.46956 14.5834 8.46956H20.4167C22.2397 8.46956 22.2397 8.0904 22.2397 6.64665C22.2397 4.82373 21.8605 4.82373 20.4167 4.82373H14.5834Z"
+                fill="#6F6F6F"
+              />
+              <path
+                d="M21.875 33.9902H13.125C4.92917 33.9902 3.28125 30.2277 3.28125 24.1464V15.3964C3.28125 8.74645 5.6875 5.9027 11.6083 5.59645C12.1917 5.56728 12.7312 6.01936 12.7604 6.63186C12.7896 7.24436 12.3229 7.7402 11.725 7.76936C7.58333 8.0027 5.46875 9.24228 5.46875 15.3964V24.1464C5.46875 29.5423 6.53333 31.8027 13.125 31.8027H21.875C28.4667 31.8027 29.5312 29.5423 29.5312 24.1464V15.3964C29.5312 9.24228 27.4167 8.0027 23.275 7.76936C22.6771 7.7402 22.2104 7.2152 22.2396 6.61728C22.2688 6.01936 22.7938 5.5527 23.3917 5.58186C29.3125 5.9027 31.7188 8.74645 31.7188 15.3819V24.1319C31.7188 30.2277 30.0708 33.9902 21.875 33.9902Z"
+                fill="#6F6F6F"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="relative">
+          <div id="profile" class="flex items-center gap-2 cursor-pointer">
+            <img class="w-8" src="./img/Profile.png" alt="profile picture" />
+            <p class="text-grayText select-none">IbrhmSptra</p>
+          </div>
+          <div id="logout" class="absolute top-12 hidden z-20">
+            <a
+              class="px-4 py-2 bg-white text-headline font-medium rounded-md border shadow-xl relative"
+              href=""
+              >Logout
+              <i
+                class="fa-solid fa-arrow-right-from-bracket text-tertiary ml-2"
+              >
+              </i>
+              <div
+                class="border-l-transparent border-l-[15px] border-r-transparent border-r-[15px] border-b-[15px] border-b-white w-0 h-0 absolute -top-[10px] left-0 right-0 m-auto"
+              ></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SIDEBAR -->
+    <div
+      id="sidebar"
+      class="fixed top-0 -right-1/2 w-1/2 h-screen z-10 border transition-all duration-500 bg-primary bg-opacity-80 backdrop-blur-md"
+    >
+      <div
+        class="container px-4 py-24 text-center flex flex-col justify-between h-full"
+      >
+        <div class="flex flex-col gap-8">
+          <div class="flex items-center justify-evenly gap-2">
+            <img class="w-8" src="./img/Profile.png" alt="profile picture" />
+            <p class="text-grayText">IbrhmSptra</p>
+          </div>
+
+          <a
+            class="px-4 py-2 border flex items-center justify-evenly gap-2 rounded-lg"
+            href="#"
+          >
+            <svg
+              fill="#6f6f6f"
+              width="30"
+              height="30"
+              viewBox="0 0 32 32"
+              style="
+                fill-rule: evenodd;
+                clip-rule: evenodd;
+                stroke-linejoin: round;
+                stroke-miterlimit: 2;
+              "
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#6f6f6f"
+            >
+              <path
+                d="M16.004 6.576c-2.941-2.289-7.202-2.083-9.905.619a7.504 7.504 0 0 0 0 10.607l9.192 9.192a1 1 0 0 0 1.415 0l9.192-9.192a7.504 7.504 0 0 0 0-10.607c-2.69-2.69-6.951-2.88-9.894-.619zM16 8.904c.438-.008.667-.258.703-.289 2.355-2.05 5.641-2.145 7.781-.005a5.503 5.503 0 0 1 0 7.778l-8.486 8.485-8.485-8.485a5.503 5.503 0 0 1 0-7.778 5.504 5.504 0 0 1 7.78.001c.187.187.442.293.707.293z"
+              />
+            </svg>
+            <p class="text-sm text-headline">Favorit</p>
+          </a>
+          <a
+            class="px-4 py-2 border flex items-center justify-evenly gap-2 rounded-lg"
+            href="#"
+          >
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 35 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.8751 19.6987H11.6667C11.0688 19.6987 10.573 19.2029 10.573 18.605C10.573 18.0071 11.0688 17.5112 11.6667 17.5112H21.8751C22.473 17.5112 22.9688 18.0071 22.9688 18.605C22.9688 19.2029 22.473 19.6987 21.8751 19.6987Z"
+                fill="#6F6F6F"
+              />
+              <path
+                d="M18.0542 25.532H11.6667C11.0688 25.532 10.573 25.0362 10.573 24.4382C10.573 23.8403 11.0688 23.3445 11.6667 23.3445H18.0542C18.6522 23.3445 19.148 23.8403 19.148 24.4382C19.148 25.0362 18.6522 25.532 18.0542 25.532Z"
+                fill="#6F6F6F"
+              />
+              <path
+                d="M20.4167 10.6571H14.5834C13.1834 10.6571 10.573 10.6571 10.573 6.64665C10.573 2.63623 13.1834 2.63623 14.5834 2.63623H20.4167C21.8167 2.63623 24.4272 2.63623 24.4272 6.64665C24.4272 8.04665 24.4272 10.6571 20.4167 10.6571ZM14.5834 4.82373C13.1397 4.82373 12.7605 4.82373 12.7605 6.64665C12.7605 8.46956 13.1397 8.46956 14.5834 8.46956H20.4167C22.2397 8.46956 22.2397 8.0904 22.2397 6.64665C22.2397 4.82373 21.8605 4.82373 20.4167 4.82373H14.5834Z"
+                fill="#6F6F6F"
+              />
+              <path
+                d="M21.875 33.9902H13.125C4.92917 33.9902 3.28125 30.2277 3.28125 24.1464V15.3964C3.28125 8.74645 5.6875 5.9027 11.6083 5.59645C12.1917 5.56728 12.7312 6.01936 12.7604 6.63186C12.7896 7.24436 12.3229 7.7402 11.725 7.76936C7.58333 8.0027 5.46875 9.24228 5.46875 15.3964V24.1464C5.46875 29.5423 6.53333 31.8027 13.125 31.8027H21.875C28.4667 31.8027 29.5312 29.5423 29.5312 24.1464V15.3964C29.5312 9.24228 27.4167 8.0027 23.275 7.76936C22.6771 7.7402 22.2104 7.2152 22.2396 6.61728C22.2688 6.01936 22.7938 5.5527 23.3917 5.58186C29.3125 5.9027 31.7188 8.74645 31.7188 15.3819V24.1319C31.7188 30.2277 30.0708 33.9902 21.875 33.9902Z"
+                fill="#6F6F6F"
+              />
+            </svg>
+            <p class="text-sm text-headline">Riwayat</p>
+          </a>
+        </div>
+        <a
+          class="px-4 py-2 bg-white text-headline font-medium rounded-md"
+          href=""
+          >Logout
+          <i class="fa-solid fa-arrow-right-from-bracket text-tertiary ml-2"></i
+        ></a>
+      </div>
+    </div>
+    <!--------------------------------------- end of Navbar ---------------------------------------------->
+
+    <!-- edit content below -->
+    <div class="py-10 px-4 sm:px-8 md:px-12 xl:px-40 xl:py-20 bg-white">
+      <div class="relative">
+        <img class="w-full h-full" src="./img/masakan-nusantara-2.png" />
         <div
-          class="absolute top-[158px] left-[75px] text-white text-6xl font-semibold font-['Poppins']"
+          class="absolute text-white text-4xl md:text-5xl lg:text-6xl font-semibold font-['Poppins'] left-[40px] md:left-[70px] lg:left-[75px] lg:top-[165px] md:top-[95px] top-[32px]"
         >
           Korea
         </div>
@@ -31,23 +242,21 @@
 
       <!-- filter -->
       <div class="mt-[56px] flex items-center">
-        <p cl2ss="text-neutral-500 text-xl font-medium font-['Poppins']">
+        <p class="text-xl font-['Poppins']">
           Urutkan :
         </p>
-        <dv class="relative ml-4">
+        <div class="relative ml-4">
           <div
-            class="w-[338px] h-[37px] bg-white rounded-[15px] border border-yellow-400 relative"
+            class="w-[240px] h-[30px] md:w-[338px] md:h-[37px] lg:w-[338px] lg:h-[37px] bg-white rounded-[15px] border border-yellow-400 relative"
           >
             <!-- Arrow (moved to the right) -->
             <img
-              class="w-[24px] h-[16px] absolute right-0 top-1/2 transform -translate-y-1/2 mr-4"
+              class="w-[20px] h-[14px] absolute right-0 top-1/2 transform -translate-y-1/2 mr-4"
               src="./img/right-arrow-svgrepo-com.png"
             />
             <p
-              2
-              1
-              2
-              class="text-black text-xl font-normal font-['Poppins'] ml-[40px] mt-1"         >
+              class="text-black text-lg font-normal font-['Poppins'] ml-[20px] md:ml-[40px] lg:ml-[40px] md:mt-1 lg:mt-1"
+            >
               Harga Terendah
             </p>
             <!-- Dropdown Content -->
@@ -62,26 +271,26 @@
               <!-- Add more options as needed -->
             </div>
           </div>
-        </stext-smv>
+        </div>
       </div>
 
       <!-- Hasil -->
-      <div class="grid grid-cols-4 gap-4 mt-[50px]">
-        <div class="relative w-[220px] h-56 bg-white shadow-xl">
+      <div class="mt-10 grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div class="relative w-full bg-white border shadow-xl">
           <div
             class="absolute top-0 right-0 w-[35px] h-[35px] bg-white rounded-[100px] mt-2 mr-2 flex items-center justify-center"
           >
             <!-- SVG Bookmark Icon -->
             <img src="./img/Bookmark.svg" alt="" class="w-6 h-6" />
           </div>
-          <img
-            src="./img/fish-and-chips-3.png"
-            alt="logo"
-            class="w-full h-auto"
-          />
+          <img src="./img/fishandchips.png" alt="logo" class="w-full h-auto" />
           <div class="p-2 mt-5">
-            <h2 class="text-lg font-bold">Fish & Chips</h2>
-            <div class="flex justify-between items-center mt-2">
+            <h2 class="text-lg font-bold text-center md:text-left lg:text-left">
+              Fish & Chips
+            </h2>
+            <div
+              class="flex justify-between items-center mt-2 flex-col sm:flex-row"
+            >
               <div>
                 <span class="text-sm">⭐⭐⭐⭐⭐</span>
                 <span class="text-grayText font-bold">(5)</span>
@@ -90,22 +299,22 @@
             </div>
           </div>
         </div>
-        <!-- Ulangi div .card untuk setiap item -->
-        <div class="relative w-[220px] h-56 bg-white shadow-xl">
+        <!-- End Card -->
+        <div class="relative w-full bg-white border shadow-xl">
           <div
             class="absolute top-0 right-0 w-[35px] h-[35px] bg-white rounded-[100px] mt-2 mr-2 flex items-center justify-center"
           >
             <!-- SVG Bookmark Icon -->
             <img src="./img/Bookmark.svg" alt="" class="w-6 h-6" />
           </div>
-          <img
-            src="./img/fish-and-chips-3.png"
-            alt="logo"
-            class="w-full h-auto"
-          />
+          <img src="./img/fishandchips.png" alt="logo" class="w-full h-auto" />
           <div class="p-2 mt-5">
-            <h2 class="text-lg font-bold">Fish & Chips</h2>
-            <div class="flex justify-between items-center mt-2">
+            <h2 class="text-lg font-bold text-center md:text-left lg:text-left">
+              Fish & Chips
+            </h2>
+            <div
+              class="flex justify-between items-center mt-2 flex-col sm:flex-row"
+            >
               <div>
                 <span class="text-sm">⭐⭐⭐⭐⭐</span>
                 <span class="text-grayText font-bold">(5)</span>
@@ -114,22 +323,22 @@
             </div>
           </div>
         </div>
-        <!-- Ulangi div .card untuk setiap item -->
-        <div class="relative w-[220px] h-56 bg-white shadow-xl">
+        <!-- End Card -->
+        <div class="relative w-full bg-white border shadow-xl">
           <div
             class="absolute top-0 right-0 w-[35px] h-[35px] bg-white rounded-[100px] mt-2 mr-2 flex items-center justify-center"
           >
             <!-- SVG Bookmark Icon -->
             <img src="./img/Bookmark.svg" alt="" class="w-6 h-6" />
           </div>
-          <img
-            src="./img/fish-and-chips-3.png"
-            alt="logo"
-            class="w-full h-auto"
-          />
+          <img src="./img/fishandchips.png" alt="logo" class="w-full h-auto" />
           <div class="p-2 mt-5">
-            <h2 class="text-lg font-bold">Fish & Chips</h2>
-            <div class="flex justify-between items-center mt-2">
+            <h2 class="text-lg font-bold text-center md:text-left lg:text-left">
+              Fish & Chips
+            </h2>
+            <div
+              class="flex justify-between items-center mt-2 flex-col sm:flex-row"
+            >
               <div>
                 <span class="text-sm">⭐⭐⭐⭐⭐</span>
                 <span class="text-grayText font-bold">(5)</span>
@@ -138,22 +347,22 @@
             </div>
           </div>
         </div>
-        <!-- Ulangi div .card untuk setiap item -->
-        <div class="relative w-[220px] h-56 bg-white shadow-xl">
+        <!-- End Card -->
+        <div class="relative w-full bg-white border shadow-xl">
           <div
             class="absolute top-0 right-0 w-[35px] h-[35px] bg-white rounded-[100px] mt-2 mr-2 flex items-center justify-center"
           >
             <!-- SVG Bookmark Icon -->
             <img src="./img/Bookmark.svg" alt="" class="w-6 h-6" />
           </div>
-          <img
-            src="./img/fish-and-chips-3.png"
-            alt="logo"
-            class="w-full h-auto"
-          />
+          <img src="./img/fishandchips.png" alt="logo" class="w-full h-auto" />
           <div class="p-2 mt-5">
-            <h2 class="text-lg font-bold">Fish & Chips</h2>
-            <div class="flex justify-between items-center mt-2">
+            <h2 class="text-lg font-bold text-center md:text-left lg:text-left">
+              Fish & Chips
+            </h2>
+            <div
+              class="flex justify-between items-center mt-2 flex-col sm:flex-row"
+            >
               <div>
                 <span class="text-sm">⭐⭐⭐⭐⭐</span>
                 <span class="text-grayText font-bold">(5)</span>
@@ -162,22 +371,22 @@
             </div>
           </div>
         </div>
-        <!-- Ulangi div .card untuk setiap item -->
-        <div class="relative w-[220px] h-56 bg-white shadow-xl">
+        <!-- End Card -->
+        <div class="relative w-full bg-white border shadow-xl">
           <div
             class="absolute top-0 right-0 w-[35px] h-[35px] bg-white rounded-[100px] mt-2 mr-2 flex items-center justify-center"
           >
             <!-- SVG Bookmark Icon -->
             <img src="./img/Bookmark.svg" alt="" class="w-6 h-6" />
           </div>
-          <img
-            src="./img/fish-and-chips-3.png"
-            alt="logo"
-            class="w-full h-auto"
-          />
+          <img src="./img/fishandchips.png" alt="logo" class="w-full h-auto" />
           <div class="p-2 mt-5">
-            <h2 class="text-lg font-bold">Fish & Chips</h2>
-            <div class="flex justify-between items-center mt-2">
+            <h2 class="text-lg font-bold text-center md:text-left lg:text-left">
+              Fish & Chips
+            </h2>
+            <div
+              class="flex justify-between items-center mt-2 flex-col sm:flex-row"
+            >
               <div>
                 <span class="text-sm">⭐⭐⭐⭐⭐</span>
                 <span class="text-grayText font-bold">(5)</span>
@@ -186,22 +395,22 @@
             </div>
           </div>
         </div>
-        <!-- Ulangi div .card untuk setiap item -->
-        <div class="relative w-[220px] h-56 bg-white shadow-xl">
+        <!-- End Card -->
+        <div class="relative w-full bg-white border shadow-xl">
           <div
             class="absolute top-0 right-0 w-[35px] h-[35px] bg-white rounded-[100px] mt-2 mr-2 flex items-center justify-center"
           >
             <!-- SVG Bookmark Icon -->
             <img src="./img/Bookmark.svg" alt="" class="w-6 h-6" />
           </div>
-          <img
-            src="./img/fish-and-chips-3.png"
-            alt="logo"
-            class="w-full h-auto"
-          />
+          <img src="./img/fishandchips.png" alt="logo" class="w-full h-auto" />
           <div class="p-2 mt-5">
-            <h2 class="text-lg font-bold">Fish & Chips</h2>
-            <div class="flex justify-between items-center mt-2">
+            <h2 class="text-lg font-bold text-center md:text-left lg:text-left">
+              Fish & Chips
+            </h2>
+            <div
+              class="flex justify-between items-center mt-2 flex-col sm:flex-row"
+            >
               <div>
                 <span class="text-sm">⭐⭐⭐⭐⭐</span>
                 <span class="text-grayText font-bold">(5)</span>
@@ -210,22 +419,22 @@
             </div>
           </div>
         </div>
-        <!-- Ulangi div .card untuk setiap item -->
-        <div class="relative w-[220px] h-56 bg-white shadow-xl">
+        <!-- End Card -->
+        <div class="relative w-full bg-white border shadow-xl">
           <div
             class="absolute top-0 right-0 w-[35px] h-[35px] bg-white rounded-[100px] mt-2 mr-2 flex items-center justify-center"
           >
             <!-- SVG Bookmark Icon -->
             <img src="./img/Bookmark.svg" alt="" class="w-6 h-6" />
           </div>
-          <img
-            src="./img/fish-and-chips-3.png"
-            alt="logo"
-            class="w-full h-auto"
-          />
+          <img src="./img/fishandchips.png" alt="logo" class="w-full h-auto" />
           <div class="p-2 mt-5">
-            <h2 class="text-lg font-bold">Fish & Chips</h2>
-            <div class="flex justify-between items-center mt-2">
+            <h2 class="text-lg font-bold text-center md:text-left lg:text-left">
+              Fish & Chips
+            </h2>
+            <div
+              class="flex justify-between items-center mt-2 flex-col sm:flex-row"
+            >
               <div>
                 <span class="text-sm">⭐⭐⭐⭐⭐</span>
                 <span class="text-grayText font-bold">(5)</span>
@@ -234,22 +443,22 @@
             </div>
           </div>
         </div>
-        <!-- Ulangi div .card untuk setiap item -->
-        <div class="relative w-[220px] h-56 bg-white shadow-xl">
+        <!-- End Card -->
+        <div class="relative w-full bg-white border shadow-xl">
           <div
             class="absolute top-0 right-0 w-[35px] h-[35px] bg-white rounded-[100px] mt-2 mr-2 flex items-center justify-center"
           >
             <!-- SVG Bookmark Icon -->
             <img src="./img/Bookmark.svg" alt="" class="w-6 h-6" />
           </div>
-          <img
-            src="./img/fish-and-chips-3.png"
-            alt="logo"
-            class="w-full h-auto"
-          />
+          <img src="./img/fishandchips.png" alt="logo" class="w-full h-auto" />
           <div class="p-2 mt-5">
-            <h2 class="text-lg font-bold">Fish & Chips</h2>
-            <div class="flex justify-between items-center mt-2">
+            <h2 class="text-lg font-bold text-center md:text-left lg:text-left">
+              Fish & Chips
+            </h2>
+            <div
+              class="flex justify-between items-center mt-2 flex-col sm:flex-row"
+            >
               <div>
                 <span class="text-sm">⭐⭐⭐⭐⭐</span>
                 <span class="text-grayText font-bold">(5)</span>
@@ -258,22 +467,22 @@
             </div>
           </div>
         </div>
-        <!-- Ulangi div .card untuk setiap item -->
-        <div class="relative w-[220px] h-56 bg-white shadow-xl">
+        <!-- End Card -->
+        <div class="relative w-full bg-white border shadow-xl">
           <div
             class="absolute top-0 right-0 w-[35px] h-[35px] bg-white rounded-[100px] mt-2 mr-2 flex items-center justify-center"
           >
             <!-- SVG Bookmark Icon -->
             <img src="./img/Bookmark.svg" alt="" class="w-6 h-6" />
           </div>
-          <img
-            src="./img/fish-and-chips-3.png"
-            alt="logo"
-            class="w-full h-auto"
-          />
+          <img src="./img/fishandchips.png" alt="logo" class="w-full h-auto" />
           <div class="p-2 mt-5">
-            <h2 class="text-lg font-bold">Fish & Chips</h2>
-            <div class="flex justify-between items-center mt-2">
+            <h2 class="text-lg font-bold text-center md:text-left lg:text-left">
+              Fish & Chips
+            </h2>
+            <div
+              class="flex justify-between items-center mt-2 flex-col sm:flex-row"
+            >
               <div>
                 <span class="text-sm">⭐⭐⭐⭐⭐</span>
                 <span class="text-grayText font-bold">(5)</span>
@@ -282,22 +491,22 @@
             </div>
           </div>
         </div>
-        <!-- Ulangi div .card untuk setiap item -->
-        <div class="relative w-[220px] h-56 bg-white shadow-xl">
+        <!-- End Card -->
+        <div class="relative w-full bg-white border shadow-xl">
           <div
             class="absolute top-0 right-0 w-[35px] h-[35px] bg-white rounded-[100px] mt-2 mr-2 flex items-center justify-center"
           >
             <!-- SVG Bookmark Icon -->
             <img src="./img/Bookmark.svg" alt="" class="w-6 h-6" />
           </div>
-          <img
-            src="./img/fish-and-chips-3.png"
-            alt="logo"
-            class="w-full h-auto"
-          />
+          <img src="./img/fishandchips.png" alt="logo" class="w-full h-auto" />
           <div class="p-2 mt-5">
-            <h2 class="text-lg font-bold">Fish & Chips</h2>
-            <div class="flex justify-between items-center mt-2">
+            <h2 class="text-lg font-bold text-center md:text-left lg:text-left">
+              Fish & Chips
+            </h2>
+            <div
+              class="flex justify-between items-center mt-2 flex-col sm:flex-row"
+            >
               <div>
                 <span class="text-sm">⭐⭐⭐⭐⭐</span>
                 <span class="text-grayText font-bold">(5)</span>
@@ -306,22 +515,22 @@
             </div>
           </div>
         </div>
-        <!-- Ulangi div .card untuk setiap item -->
-        <div class="relative w-[220px] h-56 bg-white shadow-xl">
+        <!-- End Card -->
+        <div class="relative w-full bg-white border shadow-xl">
           <div
             class="absolute top-0 right-0 w-[35px] h-[35px] bg-white rounded-[100px] mt-2 mr-2 flex items-center justify-center"
           >
             <!-- SVG Bookmark Icon -->
             <img src="./img/Bookmark.svg" alt="" class="w-6 h-6" />
           </div>
-          <img
-            src="./img/fish-and-chips-3.png"
-            alt="logo"
-            class="w-full h-auto"
-          />
+          <img src="./img/fishandchips.png" alt="logo" class="w-full h-auto" />
           <div class="p-2 mt-5">
-            <h2 class="text-lg font-bold">Fish & Chips</h2>
-            <div class="flex justify-between items-center mt-2">
+            <h2 class="text-lg font-bold text-center md:text-left lg:text-left">
+              Fish & Chips
+            </h2>
+            <div
+              class="flex justify-between items-center mt-2 flex-col sm:flex-row"
+            >
               <div>
                 <span class="text-sm">⭐⭐⭐⭐⭐</span>
                 <span class="text-grayText font-bold">(5)</span>
@@ -330,22 +539,22 @@
             </div>
           </div>
         </div>
-        <!-- Ulangi div .card untuk setiap item -->
-        <div class="relative w-[220px] h-56 bg-white shadow-xl">
+        <!-- End Card -->
+        <div class="relative w-full bg-white border shadow-xl">
           <div
             class="absolute top-0 right-0 w-[35px] h-[35px] bg-white rounded-[100px] mt-2 mr-2 flex items-center justify-center"
           >
             <!-- SVG Bookmark Icon -->
             <img src="./img/Bookmark.svg" alt="" class="w-6 h-6" />
           </div>
-          <img
-            src="./img/fish-and-chips-3.png"
-            alt="logo"
-            class="w-full h-auto"
-          />
+          <img src="./img/fishandchips.png" alt="logo" class="w-full h-auto" />
           <div class="p-2 mt-5">
-            <h2 class="text-lg font-bold">Fish & Chips</h2>
-            <div class="flex justify-between items-center mt-2">
+            <h2 class="text-lg font-bold text-center md:text-left lg:text-left">
+              Fish & Chips
+            </h2>
+            <div
+              class="flex justify-between items-center mt-2 flex-col sm:flex-row"
+            >
               <div>
                 <span class="text-sm">⭐⭐⭐⭐⭐</span>
                 <span class="text-grayText font-bold">(5)</span>
@@ -354,22 +563,22 @@
             </div>
           </div>
         </div>
-        <!-- Ulangi div .card untuk setiap item -->
-        <div class="relative w-[220px] h-56 bg-white shadow-xl">
+        <!-- End Card -->
+        <div class="relative w-full bg-white border shadow-xl">
           <div
             class="absolute top-0 right-0 w-[35px] h-[35px] bg-white rounded-[100px] mt-2 mr-2 flex items-center justify-center"
           >
             <!-- SVG Bookmark Icon -->
             <img src="./img/Bookmark.svg" alt="" class="w-6 h-6" />
           </div>
-          <img
-            src="./img/fish-and-chips-3.png"
-            alt="logo"
-            class="w-full h-auto"
-          />
+          <img src="./img/fishandchips.png" alt="logo" class="w-full h-auto" />
           <div class="p-2 mt-5">
-            <h2 class="text-lg font-bold">Fish & Chips</h2>
-            <div class="flex justify-between items-center mt-2">
+            <h2 class="text-lg font-bold text-center md:text-left lg:text-left">
+              Fish & Chips
+            </h2>
+            <div
+              class="flex justify-between items-center mt-2 flex-col sm:flex-row"
+            >
               <div>
                 <span class="text-sm">⭐⭐⭐⭐⭐</span>
                 <span class="text-grayText font-bold">(5)</span>
@@ -378,22 +587,22 @@
             </div>
           </div>
         </div>
-        <!-- Ulangi div .card untuk setiap item -->
-        <div class="relative w-[220px] h-56 bg-white shadow-xl">
+        <!-- End Card -->
+        <div class="relative w-full bg-white border shadow-xl">
           <div
             class="absolute top-0 right-0 w-[35px] h-[35px] bg-white rounded-[100px] mt-2 mr-2 flex items-center justify-center"
           >
             <!-- SVG Bookmark Icon -->
             <img src="./img/Bookmark.svg" alt="" class="w-6 h-6" />
           </div>
-          <img
-            src="./img/fish-and-chips-3.png"
-            alt="logo"
-            class="w-full h-auto"
-          />
+          <img src="./img/fishandchips.png" alt="logo" class="w-full h-auto" />
           <div class="p-2 mt-5">
-            <h2 class="text-lg font-bold">Fish & Chips</h2>
-            <div class="flex justify-between items-center mt-2">
+            <h2 class="text-lg font-bold text-center md:text-left lg:text-left">
+              Fish & Chips
+            </h2>
+            <div
+              class="flex justify-between items-center mt-2 flex-col sm:flex-row"
+            >
               <div>
                 <span class="text-sm">⭐⭐⭐⭐⭐</span>
                 <span class="text-grayText font-bold">(5)</span>
@@ -402,22 +611,22 @@
             </div>
           </div>
         </div>
-        <!-- Ulangi div .card untuk setiap item -->
-        <div class="relative w-[220px] h-56 bg-white shadow-xl">
+        <!-- End Card -->
+        <div class="relative w-full bg-white border shadow-xl">
           <div
             class="absolute top-0 right-0 w-[35px] h-[35px] bg-white rounded-[100px] mt-2 mr-2 flex items-center justify-center"
           >
             <!-- SVG Bookmark Icon -->
             <img src="./img/Bookmark.svg" alt="" class="w-6 h-6" />
           </div>
-          <img
-            src="./img/fish-and-chips-3.png"
-            alt="logo"
-            class="w-full h-auto"
-          />
+          <img src="./img/fishandchips.png" alt="logo" class="w-full h-auto" />
           <div class="p-2 mt-5">
-            <h2 class="text-lg font-bold">Fish & Chips</h2>
-            <div class="flex justify-between items-center mt-2">
+            <h2 class="text-lg font-bold text-center md:text-left lg:text-left">
+              Fish & Chips
+            </h2>
+            <div
+              class="flex justify-between items-center mt-2 flex-col sm:flex-row"
+            >
               <div>
                 <span class="text-sm">⭐⭐⭐⭐⭐</span>
                 <span class="text-grayText font-bold">(5)</span>
@@ -426,22 +635,22 @@
             </div>
           </div>
         </div>
-        <!-- Ulangi div .card untuk setiap item -->
-        <div class="relative w-[220px] h-56 bg-white shadow-xl">
+        <!-- End Card -->
+        <div class="relative w-full bg-white border shadow-xl">
           <div
             class="absolute top-0 right-0 w-[35px] h-[35px] bg-white rounded-[100px] mt-2 mr-2 flex items-center justify-center"
           >
             <!-- SVG Bookmark Icon -->
             <img src="./img/Bookmark.svg" alt="" class="w-6 h-6" />
           </div>
-          <img
-            src="./img/fish-and-chips-3.png"
-            alt="logo"
-            class="w-full h-auto"
-          />
+          <img src="./img/fishandchips.png" alt="logo" class="w-full h-auto" />
           <div class="p-2 mt-5">
-            <h2 class="text-lg font-bold">Fish & Chips</h2>
-            <div class="flex justify-between items-center mt-2">
+            <h2 class="text-lg font-bold text-center md:text-left lg:text-left">
+              Fish & Chips
+            </h2>
+            <div
+              class="flex justify-between items-center mt-2 flex-col sm:flex-row"
+            >
               <div>
                 <span class="text-sm">⭐⭐⭐⭐⭐</span>
                 <span class="text-grayText font-bold">(5)</span>
@@ -450,12 +659,11 @@
             </div>
           </div>
         </div>
-        <!-- Ulangi div .card untuk setiap item -->
-        
+        <!-- End Card -->
       </div>
 
       <!-- Pagination -->
-      <div class="flex items-center justify-center mt-16 mb-24">
+      <div class="flex items-center justify-center mt-16 mb-10">
         <button
           class="mx-1 px-3 py-2 rounded-full bg-white shadow-xl font-semibold"
         >
@@ -473,25 +681,175 @@
         </button>
         <button
           class="mx-1 px-3 py-2 rounded-full bg-white shadow-xl font-semibold"
-         >3
+        >
+          3
         </button>
         <button
           class="mx-1 px-3 py-2 rounded-full bg-white shadow-xl font-semibold"
-        >        4
+        >
+          4
         </button>
         <button
           class="mx-1 px-3 py-2 rounded-full bg-white shadow-xl font-semibold"
-        >       ...
+        >
+          ...
         </button>
         <button
           class="mx-1 px-3 py-2 rounded-full bg-white shadow-xl font-semibold"
-        >        8
+        >
+          8
         </button>
         <button
           class="mx-1 px-3 py-2 rounded-full bg-white shadow-xl font-semibold"
-        >       >
+        >
+          >
         </button>
-  </div>
+      </div>
     </div>
+    <!-- editable content -->
+
+    <!--------------------------------------- Footer ---------------------------------------------->
+    <footer
+      class="grid grid-cols-1 px-4 py-2 gap-y-4 bg-primary sm:px-8 sm:py-4 md:px-12 md:items-center md:grid-cols-3 xl:px-40 xl:py-8 xl:grid-cols-3 xl:gap-y-0"
+    >
+      <div
+        class="grid grid-cols-2 col-span-2 gap-x-4 gap-y-2 xl:gap-x-8 xl:gap-y-4"
+      >
+        <div>
+          <h4 class="font-bold">Perusahaan</h4>
+          <p class="text-xs text-grayText mt-1 md:text-sm">
+            Jl. Gatot Subroto No.Kav.88, RT.1/RW.9, Kuningan Bar., Kec. Mampang
+            Prpt., Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 12899
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold">Tentang Foodo</h4>
+          <p class="mt-1 text-xs text-grayText md:text-sm">
+            Foodo adalah sebuah aplikasi resep makanan dengan fitur pesan bahan
+            yang akan di antarkan ke alamat anda
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold">Ikuti Kami</h4>
+          <div class="flex gap-2 mt-1">
+            <!-- Facebook -->
+            <svg fill="#000000" height="25" width="25" viewBox="0 0 32 32">
+              <path
+                d="M30.996 16.091c-0.001-8.281-6.714-14.994-14.996-14.994s-14.996 6.714-14.996 14.996c0 7.455 5.44 13.639 12.566 14.8l0.086 0.012v-10.478h-3.808v-4.336h3.808v-3.302c-0.019-0.167-0.029-0.361-0.029-0.557 0-2.923 2.37-5.293 5.293-5.293 0.141 0 0.281 0.006 0.42 0.016l-0.018-0.001c1.199 0.017 2.359 0.123 3.491 0.312l-0.134-0.019v3.69h-1.892c-0.086-0.012-0.185-0.019-0.285-0.019-1.197 0-2.168 0.97-2.168 2.168 0 0.068 0.003 0.135 0.009 0.202l-0.001-0.009v2.812h4.159l-0.665 4.336h-3.494v10.478c7.213-1.174 12.653-7.359 12.654-14.814v-0z"
+              ></path>
+            </svg>
+
+            <!-- Instagram -->
+            <svg
+              height="25"
+              width="25"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="-143 145 512 512"
+              xml:space="preserve"
+            >
+              <path
+                d="M113 446c24.8 0 45.1-20.2 45.1-45.1 0-9.8-3.2-18.9-8.5-26.3-8.2-11.3-21.5-18.8-36.5-18.8s-28.3 7.4-36.5 18.8c-5.3 7.4-8.5 16.5-8.5 26.3C68 425.8 88.2 446 113 446zM211.4 345.9v-43.4h-5.6l-37.8.1.2 43.4z"
+              />
+              <path
+                d="M183 401c0 38.6-31.4 70-70 70s-70-31.4-70-70c0-9.3 1.9-18.2 5.2-26.3H10v104.8C10 493 21 504 34.5 504h157c13.5 0 24.5-11 24.5-24.5V374.7h-38.2c3.4 8.1 5.2 17 5.2 26.3z"
+              />
+              <path
+                d="M113 145c-141.4 0-256 114.6-256 256s114.6 256 256 256 256-114.6 256-256-114.6-256-256-256zm128 229.7v104.8c0 27.3-22.2 49.5-49.5 49.5h-157C7.2 529-15 506.8-15 479.5V322.4c0-27.3 22.2-49.5 49.5-49.5h157c27.3 0 49.5 22.2 49.5 49.5v52.3z"
+              />
+            </svg>
+
+            <!-- Twitter -->
+            <svg
+              height="25"
+              width="25"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="-143 145 512 512"
+              xml:space="preserve"
+            >
+              <path
+                d="M113 145c-141.4 0-256 114.6-256 256s114.6 256 256 256 256-114.6 256-256-114.6-256-256-256zm102.2 216.2c.1 2.2.1 4.5.1 6.8 0 69.5-52.9 149.7-149.7 149.7-29.7 0-57.4-8.7-80.6-23.6 4.1.5 8.3.7 12.6.7 24.6 0 47.3-8.4 65.3-22.5-23-.4-42.5-15.6-49.1-36.5 3.2.6 6.5.9 9.9.9 4.8 0 9.5-.6 13.9-1.9-24.1-4.8-42.2-26.1-42.2-51.6v-.6c7.1 3.9 15.2 6.3 23.8 6.6-14.1-9.4-23.4-25.6-23.4-43.8 0-9.6 2.6-18.7 7.1-26.5 26 31.9 64.7 52.8 108.4 55-.9-3.8-1.4-7.8-1.4-12 0-29 23.6-52.6 52.6-52.6 15.1 0 28.8 6.4 38.4 16.6 12-2.4 23.2-6.7 33.4-12.8-3.9 12.3-12.3 22.6-23.1 29.1 10.6-1.3 20.8-4.1 30.2-8.3-7 10.6-15.9 19.8-26.2 27.3z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold">Costumer Service</h4>
+          <div class="flex items-center gap-2 mt-1">
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3.75 5.25 3 6v12l.75.75h16.5L21 18V6l-.75-.75H3.75zm.75 2.446v9.554h15V7.695L12 14.514 4.5 7.696zm13.81-.946H5.69L12 12.486l6.31-5.736z"
+                fill="#000"
+              />
+            </svg>
+            <p class="text-xs text-grayText md:text-sm">cs@foodo.com</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m14.33 15.94 1.33-1.33a2.202 2.202 0 0 1 3.13 0l1.56 1.56a2.198 2.198 0 0 1 0 3.13l-.71.72a3.3 3.3 0 0 1-3.82.63A28.93 28.93 0 0 1 3.35 8.19a3.29 3.29 0 0 1 .64-3.82l.71-.72a2.22 2.22 0 0 1 3.13 0L9.4 5.22a2.22 2.22 0 0 1 0 3.13L8.07 9.68a30.081 30.081 0 0 0 2.89 3.36c1.04 1.04 2.156 2 3.34 2.87l.03.03z"
+                stroke="#000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="text-xs text-grayText md:text-sm">(021) 12098734</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img
+          class="max-w-[150px] m-auto sm:max-w-[200px]"
+          src="./img/Logo.png"
+          alt="logo"
+        />
+        <div class="flex justify-center mt-6 gap-2">
+          <img class="h-7" src="./img/playstore.png" alt="playstore" />
+          <img class="h-7" src="./img/appstore.png" alt="appstore" />
+        </div>
+        <p class="text-grayText text-center mt-4 text-sm md:text-base xl:mt-8">
+          © 2022 - 2024, PT. Foodo
+        </p>
+      </div>
+    </footer>
+    <!--------------------------------------- end of Footer ---------------------------------------------->
+
+    <script>
+      // ---------------------------------------------------------------- COPY FOR NAVBAR ---------------------------------------
+      // SIDEBAR
+      const hamburger = document.getElementById("hamburger");
+      const sidebar = document.getElementById("sidebar");
+      let sidebarOpen = false;
+      hamburger.addEventListener("click", function () {
+        sidebarOpen = !sidebarOpen;
+        if (sidebarOpen) {
+          sidebar.classList.replace("-right-1/2", "right-0");
+        } else {
+          sidebar.classList.replace("right-0", "-right-1/2");
+        }
+      });
+
+      // Profile
+      const profile = document.getElementById("profile");
+      const logout = document.getElementById("logout");
+      profile.addEventListener("click", () => {
+        logout.classList.toggle("hidden");
+      });
+      // ---------------------------------------------------------------- COPY FOR NAVBAR------------------------------------------
+    </script>
   </body>
 </html>
