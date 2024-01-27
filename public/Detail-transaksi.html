@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+        
+    <!-- Style css output -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <title>Detail Transaksi</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="flex justify-between top-0 left-0 right-0 h-16 box-border p-4 bg-yellow-400 bg-no-repeat bg-cover" style="background-image: url(../public/img/Background.webp)">
+        <!--Logo-->
+        <img class="w-20 h-6 ml-40 mr-14 mt-1" src="../public/img/Logo.png" alt="">
+        
+        <!--search-->
+        <div class="relative w-full max-w-xl mr-6 focus-within:text-purple-500">
+            <div class="absolute inset-y-0 flex items-center pl-1">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd">
+                    </path>
+                </svg>
+            </div>
+                <input class="w-full pl-8 pr-2 text-xl font-poppins text-gray-700 placeholder-gray-600 bg-white border-0 rounded-xl form-input" type="text" placeholder="Cari Resep" aria-label="Search"/>
+        </div>
+        <!--end search-->
+        
+        <nav>
+            <ul class="flex space-x-5 justify-normal pr-4 mr-40">
+                <li><a href="#"><img class="w-8 h-7" src="../public/img/hati.png" alt=""></a></li>
+                <li><a href="#"><img class="w-8 h-7" src="../public/img/history.png" alt=""></a></li>
+                <li class="text-sm font-poppins text-slate-500"><a class="ml-3 flex items-center" href=""><img class="rounded-full w-8 h-7 mr-3" src="../public/img/Profile.jpeg" alt="">Fachrizal Kurnaiwan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Body -->
+    <div class="relative mb-20">
+        <p class="font-bold text-3xl ml-40 mt-20">Detail Resep</p>
+        <div class="flex space-x-5 place-content-center mr-40">
+            <!-- Kontainer Kiri -->
+            <div class="w-2/5 bg-white shadow-md rounded-xl overflow-hidden mr-4 ml-40 mt-16">
+                <img class="rounded-t-2xl w-max h-72 min-w-full mb-2" src="../public/img/Rawon.png" alt="">
+                <div class="mt-5 text-center font-bold text-xl">Rawon Daging Sapi</div>
+                <table class="mt-2 max-w-lg ml-4 font-poppins items-start">
+                    <tr>
+                        <td>Total Bahan  </td>
+                        <td>:</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>Total Harga  </td>
+                        <td>:</td>
+                        <td>Rp100.000</td>
+                    </tr>
+                    <tr>
+                        <td>Pembayaran  </td>
+                        <td>:</td>
+                        <td>COD (Cash On Delivery)</td>
+                    </tr>
+                    <tr>
+                        <td class="align-text-top">Alamat  </td>
+                        <td class="align-text-top">:</td>
+                        <td>Jl. Gatot Subroto No.Kav.88, RT.1/RW.9, Kuningan Bar., Kec. Mampang Prpt., Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 12899</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Kontainer kanan -->
+            <div class="w-2/5 bg-white shadow-md rounded-xl overflow-hidden mr-4 ml-40 mt-16">
+                <b class="ml-4 text-red-600 text-xl">Detail Harga</b>
+                <div class="flex px-5 py-7 font-poppins relative mr-4">
+                    <div>
+                        <p><font color="red">500 </font>g daging Sapi</p>
+                        <p><font color="red">1 </font>sdm air asam jawa</p>
+                        <p><font color="red">1 </font>sdm kaldu sapi bubuk</p>
+                        <p><font color="red">3 </font>liter air</p>
+                        <p><font color="red">1 </font>dengkul sapi</p>
+                        <p><font color="red">1 </font>batang serai</p>
+                        <p><font color="red">2 </font>batang daun bawang iris 1cm</p>
+                        <p><font color="red">1 </font>sdm garam</p>
+                        <p><font color="red">5 </font>sdm minyak goreng</p>
+                        <p><font color="red">4 </font>siung bawang putih</p>
+                        <p><font color="red">5 </font>buah kluwek</p>
+                        <p><font color="red">1 </font>cm kunyit, bakar</p>
+                        <p><font color="red">8 </font>butir bawang merah</p>
+                        <p><font color="red">4 </font>butir kemiri, disangrai</p>
+                        <p><font color="red">250 </font>g tauge</p>
+                        <p><font color="red">100 </font>g kerupuk udang</p>
+                        <p><font color="red">1 </font>buah jeruk nipis</p>
+                    </div>
+
+                    <div class="absolute right-0">
+                        <p>Rp45.000</p>
+                        <p>Rp500</p>
+                        <p>Rp500</p>
+                        <p>Rp0</p>
+                        <p>Rp15.000</p>
+                        <p>Rp1.000</p>
+                        <p>Rp1.000</p>
+                        <p>Rp500</p>
+                        <p>Rp3.000</p>
+                        <p>Rp1.500</p>
+                        <p>Rp0</p>
+                        <p>Rp500</p>
+                        <p>Rp3.000</p>
+                        <p>Rp1.000</p>
+                        <p>Rp13.000</p>
+                        <p>Rp15.000</p>
+                        <p>Rp2.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="flex space-x-20 bg-yellow-400 bg-no-repeat bg-cover" style="background-image: url(../public/img/Background.webp)"">
+        <!-- Kontainer kiri -->
+        <div class="ml-40 my-5 space-y-1">
+            <h1 class="text-xl font-bold">Perusahaan</h1>
+            <p class="font-poppins text-slate-700 " align="justify">
+                Jl. Gatot Subroto No.Kav.88, RT.1/RW.9, Kuningan Bar., Kec. Mampang Prpt., Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 12899
+            </p>
+            <h1 class="text-xl font-bold pt-6">Ikuti Kami</h1>
+            <div class="flex size-1/4 top-3 items-center space-x-2">
+                <a href=""><img src="../public/img/facebook.png" alt=""></a>
+                <a href=""><img src="../public/img/instagram.png" alt=""></a>
+                <a href=""><img src="../public/img/twitter.png" alt=""></a>
+            </div>
+        </div>
+            
+        <!-- kontainer Tengah -->
+        <div class="my-5 space-y-1">
+            <h1 class="text-xl font-bold">Tentang Foodo</h1>
+            <p class="font-poppins text-slate-700" align="justify">
+                Foodo adalah sebuah aplikasi resep makanan dengan fitur pesan bahan yang akan di antarkan ke alamat anda
+            </p>
+            <h1 class="text-xl font-bold">Customer Service</h1>
+            <div class="space-y-2">
+                <a class="flex font-poppins text-slate-700" href=""><img class="w-1/12 mr-5" src="../public/img/mail.png" alt="">costumerservice@foodo.com</a>
+                <a class="flex font-poppins text-slate-700" href=""><img class="w-1/12 mr-5" src="../public/img/phone.png" alt="">(021) 12098734</a>
+            </div>
+        </div>
+    
+        <!-- kontainer kanan -->
+        <div class="space-y-5 mt-14">
+            <img class="w-1/2 ml-14" src="../public/img/Logo.png" alt="">
+            <div class="flex items-center space-x-2">
+                <a href="#" class="rounded-xl ml-9">
+                    <img class="w-28 h-9" src="../public/img/google.JPG" alt="">
+                </a>
+                <a href="#" class="rounded-xl ">
+                    <img class="w-28 h-9" src="../public/img/apple.JPG" alt="">
+                </a>
+            </div>
+            <p class="ml-16 font-poppins text-slate-700">© 2022 - 2024, PT. Foodo</p>
+        </div>
+    </footer>
+</body>
+</html>
